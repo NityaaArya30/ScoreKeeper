@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+<style>
+    h2{
+        font-size:2rem;
+        color:red;
+        margin-left: 20px;
+    }
+    .heading{
+        font-weight: bold;
+        color: green;
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 2rem;
+        margin-left: 15px;
+    }
+   body {
+    background-image: linear-gradient( 109.6deg,  rgba(255,24,134,1) 11.2%, rgba(252,232,68,1) 52%, rgba(53,178,239,1) 100.2% );
+   }
+</style>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter" >
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://static.vecteezy.com/system/resources/previews/013/440/450/non_2x/people-playing-table-tennis-sports-with-racket-and-ball-of-ping-pong-game-match-in-flat-cartoon-hand-drawn-templates-illustration-vector.jpg" alt="ping pong">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper
+                            </p>
+                          
+                        </header>
+                        <h3 id="names"> player1 : player2 </h3>
+                        <div class="card-content">
+                            <div class="content">
+                                
+                                <h1 class="title is-1"><span id="p1Display">0</span> || <span id="p2Display">0</span> </h1>
+                                
+                                <p class="subtitle">Use the buttons below to keep score</p>
+                                <b> <span class="has-text-success" id="winMsg"></span></b>
+                                <label for="playto" class="label is-large is-inline">Playing To</label>
+                                <div class="select is-rounded">
+                                    <select name="" id="playto">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <h2 id="winMsg">Result...</h2>
+                        <footer class="card-footer">
+                            <button id="p1Button" class="is-primary button card-footer-item is-large">+1 Player
+                                One</button>
+                            <button id="p2Button" class="is-info button card-footer-item is-large">+1 Player
+                                Two</button>
+                            <button id="reset" class="is-danger button card-footer-item is-large">Reset</button>
+
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
